@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Курсовой проект Симулятор гонок", "Курсовой проект Симулятор гонок.vcxproj", "{FEB630F2-8EAF-4DE3-B792-BD2D5802DC20}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RaceDynamic", "RaceDynamic\RaceDynamic.vcxproj", "{EA55697E-688C-4814-85C4-FE90ED307C81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{FEB630F2-8EAF-4DE3-B792-BD2D5802DC20}.Release|x64.Build.0 = Release|x64
 		{FEB630F2-8EAF-4DE3-B792-BD2D5802DC20}.Release|x86.ActiveCfg = Release|Win32
 		{FEB630F2-8EAF-4DE3-B792-BD2D5802DC20}.Release|x86.Build.0 = Release|Win32
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Debug|x64.ActiveCfg = Debug|x64
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Debug|x64.Build.0 = Debug|x64
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Debug|x86.ActiveCfg = Debug|Win32
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Debug|x86.Build.0 = Debug|Win32
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Release|x64.ActiveCfg = Release|x64
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Release|x64.Build.0 = Release|x64
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Release|x86.ActiveCfg = Release|Win32
+		{EA55697E-688C-4814-85C4-FE90ED307C81}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

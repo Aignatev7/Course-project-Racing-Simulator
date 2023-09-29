@@ -24,10 +24,10 @@
     <ClCompile Include="Transport.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Camel.cpp">
+    <ClCompile Include="MagicCarpet.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Centaur.cpp">
+    <ClCompile Include="Camel.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="AllTerrainBoots.cpp">
@@ -36,51 +36,60 @@
     <ClCompile Include="AirTransport.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="MagicCarpet.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Eagle.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Broomstick.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="CamelFast.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Centaur.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceDynamic\dllmain.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Eagle.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="transport_factory.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GroundTransport.h">
+    <ClInclude Include="TransportType.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="transport_factory.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Transport.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="Camel.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Centaur.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="AllTerrainBoots.h">
+    <ClInclude Include="MagicCarpet.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="AirTransport.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="MagicCarpet.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
-    <ClInclude Include="Eagle.h">
+    <ClInclude Include="AllTerrainBoots.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="Broomstick.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="TransportType.h">
+    <ClInclude Include="Camel.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="GroundTransport.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Eagle.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
     <ClInclude Include="CamelFast.h">
+      <Filter>Исходные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="Centaur.h">
       <Filter>Исходные файлы</Filter>
     </ClInclude>
   </ItemGroup>

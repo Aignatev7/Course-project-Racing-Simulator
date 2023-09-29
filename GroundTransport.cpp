@@ -1,5 +1,9 @@
 #include "GroundTransport.h"
 
+TransportType GroundTransport::getType() {
+	return TransportType::Ground;
+}
+
 GroundTransport::GroundTransport() { name_transport = "Наземный транспорт"; }
 
 void GroundTransport::set_final_time(double distance) {

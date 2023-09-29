@@ -7,6 +7,8 @@ protected:
 	double distance_reduction_coefficient; // коэффициент сокращения расстояния
 
 public:
+	TransportType getType() override;
+
 	AirTransport();
 
 	void set_final_time(double distance);

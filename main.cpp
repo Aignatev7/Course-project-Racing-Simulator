@@ -10,14 +10,15 @@
 #include "Eagle.h"
 #include "Broomstick.h"
 #include "TransportType.h"
+#include "transport_factory.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
 
 	int type_of_race;        // тип гонки
-	int distance_length;     // расстояние
+	double distance = 0;     // расстояние
 	int registration = 0;		  // регистрация
-	int transport_selection = 0;  // выбор траспорта
+	int transport_selection = 0;  // выбор транспорта
 
 	std::cout << "Добро пожаловать на гоночный симулятор!" << std::endl;
 	std::cout << "1. Гонка для наземного транспорта" << std::endl;
@@ -26,7 +27,7 @@ int main() {
 	std::cout << "Выберите тип гонки: ";
 	std::cin >> type_of_race;
 	std::cout << "Укажите длину дистанции (должна быть положительна): ";
-	std::cin >> distance_length;
+	std::cin >> distance;
 	std::cout << "Должно быть зарегистрировано хотя бы 2 транспортных средства" << std::endl;
 	std::cout << "1. Зарегистрировать транспорт" << std::endl;
 	std::cout << "Выберите действие: ";
@@ -34,26 +35,46 @@ int main() {
 	int transport_selection_1 = 0;    // зарегистрпрованный транспорт 1
 	int transport_selection_2 = 0;    // зарегистрпрованный транспорт 2
 
-	/*Camel camel;*/
-	/*camel.set_final_time(distance_length);*/
+	//вызываем фабрику для создания списка обьектов
+	size_t total_transports = 0;
+	Transport** transports_all = makeTransports(total_transports);
 
-	/*CamelFast camelFast;
-	camelFast.set_final_time(distance_length);
+	//массив с транспортами, которые добавил пользователь на гонку
+	size_t selected_transports = 2;
+	Transport** transports_race = new Transport * [selected_transports];
+	//здесь должна быть логика выбора из списка и проверки типа, но у меня просто по номеру добавляем всех
+	transports_race[0] = transports_all[0];
+	transports_race[1] = transports_all[1];
+
+	//массив с результатами
+	RaceResults* results = new RaceResults[selected_transports];
+	//выполняем расчёт
+	for (int i = 0; i < selected_transports; i++)
+	{
+		results[i].transport_name = std::string(transports_race[i]->getName());
+		//results[i].time = transports_race[i]->calcTimeRide(100);
+	}
+
+	Camel camel;
+	camel.set_final_time(distance);
+
+	CamelFast camelFast;
+	camelFast.set_final_time(distance);
 
 	Centaur centaur;
-	centaur.set_final_time(distance_length);
+	centaur.set_final_time(distance);
 
 	AllTerrainBoots allTerrainBoots;
-	allTerrainBoots.set_final_time(distance_length);
+	allTerrainBoots.set_final_time(distance);
 
 	MagicCarpet magicCarpet;
-	magicCarpet.set_final_time(distance_length);
+	magicCarpet.set_final_time(distance);
 
 	Eagle eagle;
-	eagle.set_final_time(distance_length);
+	eagle.set_final_time(distance);
 
 	Broomstick broomstick;
-	broomstick.set_final_time(distance_length);*/
+	broomstick.set_final_time(distance);
 
 	do {
 		if (registration == 1) {
@@ -72,7 +93,7 @@ int main() {
 		else {
 			return 1;
 		}
-		std::cout << "Расстояние: " << distance_length << std::endl;
+		std::cout << "Расстояние: " << distance << std::endl;
 		std::cout << "Зарегистрированные транспортные средства: " << static_cast<char>(transport_selection_1) << std::endl;
 		std::cout << "1. Верблюд" << std::endl;
 		std::cout << "2. Верблюд-быстроход" << std::endl;
@@ -123,6 +144,31 @@ int main() {
 
 	} while (transport_selection != 0);
 
+	std::cout << "Результаты гонки: " << std::endl;
+
+	//тут должна быть сортировка результатов
+
+	//отображаем результаты
+	for (int i = 0; i < total_transports; i++)
+	{
+		std::cout << "Name:" << results[i].transport_name << std::endl;
+		std::cout << "Time for 100:" << results[i].time << std::endl;
+	}
+	//освобождаем память
+	for (int i = 0; i < total_transports; i++)
+	{
+		delete transports_all[i];
+	}
+	delete[] transports_all;
+	//мы не удаляем transports_race, так как будет двойное удаление памяти
+	//уже удалили все обекты выше
+	delete[] results;
+
+	return 0;
+}
+
+
+
 	/*if (transport_selection_1 == 1) {
 		std::cout << "Верблюд. Время: " << camel.get_final_time() << std::endl;
 	}
@@ -153,7 +199,7 @@ int main() {
 
 	/*std::cout << transport_selection_1 << std::endl;
 	std::cout << transport_selection_2 << std::endl;*/
-}
+
 
 
 
