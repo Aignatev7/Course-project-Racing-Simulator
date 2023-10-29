@@ -1,8 +1,13 @@
 #pragma once
 #include "Transport.h"
 //#include "TransportType.h"
+#ifdef GROUNDTRANSPORT_EXPORTS
+#define GROUNDTRANSPORT_API __declspec(dllexport)
+#else
+#define GROUNDTRANSPORT_API __declspec(dllimport)
+#endif
 
-class GroundTransport : public Transport // класс Наземный транспорт
+class GROUNDTRANSPORT_API GroundTransport : public Transport // класс Наземный транспорт
 {
 protected:
 	int driving_time_before_rest; // время движения до отдыха

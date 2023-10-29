@@ -1,7 +1,15 @@
 #pragma once
+#include <iostream>
 #include "GroundTransport.h"
+#include "TransportType.h"
+#ifdef ALLTERRAINBOOTS_EXPORTS
+#define ALLTERRAINBOOTS_API __declspec(dllexport)
+#else
+#define ALLTERRAINBOOTS_API __declspec(dllimport)
+#endif
 
-class AllTerrainBoots : public GroundTransport // класс Ботинки-вездеходы
+
+class ALLTERRAINBOOTS_API AllTerrainBoots : public GroundTransport // класс Ботинки-вездеходы
 {
 public:
 	AllTerrainBoots();

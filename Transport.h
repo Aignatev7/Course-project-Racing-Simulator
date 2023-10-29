@@ -1,8 +1,13 @@
 #pragma once
 #include <iostream>
 #include "TransportType.h"
+#ifdef TRANSPORT_EXPORTS
+#define TRANSPORT_API __declspec(dllexport)
+#else
+#define TRANSPORT_API __declspec(dllimport)
+#endif
 
-class Transport // класс Транспорт
+class TRANSPORT_API Transport // класс Транспорт
 {
 protected:
 	int speed;                  // скорость

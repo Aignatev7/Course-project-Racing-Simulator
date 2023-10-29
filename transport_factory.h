@@ -7,8 +7,13 @@
 #include "MagicCarpet.h"
 #include "Eagle.h"
 #include "Broomstick.h"
+#ifdef TRANSPORTFACTORY_EXPORTS
+#define TRANSPORTFACTORY_API __declspec(dllexport)
+#else
+#define TRANSPORTFACTORY_API __declspec(dllimport)
+#endif
 
-Transport** makeTransports(size_t& total_transports);
+ Transport** TRANSPORTFACTORY_API makeTransports(size_t& total_transports);
 
 struct RaceResults {
 	std::string transport_name;

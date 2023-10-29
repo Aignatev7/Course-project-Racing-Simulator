@@ -2,7 +2,7 @@
 
 Transport** makeTransports(size_t& total_transports)
 {
-	total_transports = 2;
+	total_transports = 7;
 	Transport** trans_arr = new Transport * [total_transports];
 	trans_arr[0] = new Camel();
 	trans_arr[1] = new CamelFast();

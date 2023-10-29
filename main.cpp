@@ -32,8 +32,8 @@ int main() {
 	std::cout << "1. Зарегистрировать транспорт" << std::endl;
 	std::cout << "Выберите действие: ";
 	std::cin >> registration;
-	int transport_selection_1 = 0;    // зарегистрпрованный транспорт 1
-	int transport_selection_2 = 0;    // зарегистрпрованный транспорт 2
+	int transport_selection_1 = 0;    // зарегистрированный транспорт 1
+	int transport_selection_2 = 0;    // зарегистрированный транспорт 2
 
 	//вызываем фабрику для создания списка обьектов
 	size_t total_transports = 0;
@@ -45,7 +45,7 @@ int main() {
 	//здесь должна быть логика выбора из списка и проверки типа, но у меня просто по номеру добавляем всех
 	transports_race[0] = transports_all[0];
 	transports_race[1] = transports_all[1];
-
+	  
 	//массив с результатами
 	RaceResults* results = new RaceResults[selected_transports];
 	//выполняем расчёт
@@ -81,25 +81,31 @@ int main() {
 			switch (type_of_race) {
 			case 1:
 				std::cout << "Гонка для наземного транспорта. ";
+				//type_of_race = 1;
 				break;
 			case 2:
 				std::cout << "Гонка для воздушного транспорта. ";
+				//type_of_race = 2;
 				break;
 			case 3:
 				std::cout << "Гонка для наземного и воздушного транспорта. ";
+				type_of_race = 3;
 				break;
 			}
 		}
 		else {
 			return 1;
 		}
+
+		std::cout << "\ntype_of_race: " << type_of_race << std::endl;
+
 		std::cout << "Расстояние: " << distance << std::endl;
-		std::cout << "Зарегистрированные транспортные средства: " << static_cast<char>(transport_selection_1) << std::endl;
+		std::cout << "Зарегистрированные транспортные средства: " << transport_selection << std::endl;
 		std::cout << "1. Верблюд" << std::endl;
 		std::cout << "2. Верблюд-быстроход" << std::endl;
 		std::cout << "3. Кентавр" << std::endl;
 		std::cout << "4. Ботинки-вездеходы" << std::endl;
-		std::cout << "5. Ковёр-самолёт" << std::endl;
+		std::cout << "5. Ковёр-самолёт" << std::endl; 
 		std::cout << "6. Орёл" << std::endl;
 		std::cout << "7. Метла" << std::endl;
 		std::cout << "0. Закончить регистрацию" << std::endl;
@@ -110,24 +116,31 @@ int main() {
 		switch (transport_selection) {
 		case 1:
 			std::cout << "Верблюд";
+			transport_selection = 1;
 			break;
 		case 2:
 			std::cout << "Верблюд-быстроход";
+			transport_selection = 2;
 			break;
 		case 3:
 			std::cout << "Кентавр";
+			transport_selection = 3;
 			break;
 		case 4:
 			std::cout << "Ботинки-вездеходы";
+			transport_selection = 4;
 			break;
 		case 5:
 			std::cout << "Ковёр-самолёт";
+			transport_selection = 5;
 			break;
 		case 6:
 			std::cout << "Орёл";
+			transport_selection = 6;
 			break;
 		case 7:
 			std::cout << "Метла";
+			transport_selection = 7;
 			break;
 		}
 		if (transport_selection != 0) {

@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaceDynamic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaceDynamic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaceDynamic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)RaceDynamic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,33 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AirTransport.cpp" />
-    <ClCompile Include="AllTerrainBoots.cpp" />
-    <ClCompile Include="Broomstick.cpp" />
-    <ClCompile Include="Camel.cpp" />
-    <ClCompile Include="CamelFast.cpp" />
-    <ClCompile Include="Centaur.cpp" />
-    <ClCompile Include="Eagle.cpp" />
-    <ClCompile Include="GroundTransport.cpp" />
-    <ClCompile Include="MagicCarpet.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="RaceDynamic\dllmain.cpp" />
-    <ClCompile Include="Transport.cpp" />
-    <ClCompile Include="transport_factory.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AirTransport.h" />
-    <ClInclude Include="AllTerrainBoots.h" />
-    <ClInclude Include="Broomstick.h" />
-    <ClInclude Include="Camel.h" />
-    <ClInclude Include="CamelFast.h" />
-    <ClInclude Include="Centaur.h" />
-    <ClInclude Include="Eagle.h" />
-    <ClInclude Include="GroundTransport.h" />
-    <ClInclude Include="MagicCarpet.h" />
-    <ClInclude Include="Transport.h" />
-    <ClInclude Include="TransportType.h" />
-    <ClInclude Include="transport_factory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

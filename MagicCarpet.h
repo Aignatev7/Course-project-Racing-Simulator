@@ -1,7 +1,12 @@
 #pragma once
 #include "AirTransport.h"
+#ifdef MAGICCARPET_EXPORTS
+#define MAGICCARPET_API __declspec(dllexport)
+#else
+#define MAGICCARPET_API __declspec(dllimport)
+#endif
 
-class MagicCarpet : public AirTransport // класс Ковер-самолёт
+class MAGICCARPET_API MagicCarpet : public AirTransport // класс Ковер-самолёт
 {
 public:
 	MagicCarpet();
