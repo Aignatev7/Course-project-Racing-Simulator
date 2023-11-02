@@ -1,12 +1,19 @@
 #pragma once
 #include "AirTransport.h"
-#ifdef BROOMSTICK_EXPORTS
-#define BROOMSTICK_API __declspec(dllexport)
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define BROOMSTICK_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-class BROOMSTICK_API Broomstick : public AirTransport // класс Метла
+//#ifdef BROOMSTICK_EXPORTS
+//#define BROOMSTICK_API __declspec(dllexport)
+//#else
+//#define BROOMSTICK_API __declspec(dllimport)
+//#endif
+
+class TRANSPORTLIB_API Broomstick : public AirTransport // класс Метла
 {
 public:
 	Broomstick();

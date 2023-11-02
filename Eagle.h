@@ -1,12 +1,19 @@
 #pragma once
 #include "AirTransport.h"
-#ifdef EAGLE_EXPORTS
-#define EAGLE_API __declspec(dllexport)
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define EAGLE_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-class EAGLE_API Eagle : public AirTransport // класс ќрЄл
+//#ifdef EAGLE_EXPORTS
+//#define EAGLE_API __declspec(dllexport)
+//#else
+//#define EAGLE_API __declspec(dllimport)
+//#endif
+
+class  Eagle : public AirTransport // класс ќрЄл
 {
 public:
 	Eagle();

@@ -13,7 +13,7 @@
 #define TRANSPORTFACTORY_API __declspec(dllimport)
 #endif
 
- Transport** TRANSPORTFACTORY_API makeTransports(size_t& total_transports);
+TRANSPORTFACTORY_API Transport** makeTransports(size_t& total_transports);
 
 struct RaceResults {
 	std::string transport_name;

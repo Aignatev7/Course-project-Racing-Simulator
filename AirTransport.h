@@ -1,13 +1,20 @@
 #pragma once
 #include "Transport.h"
 //#include "TransportType.h"
-#ifdef AIRTRANSPORT_EXPORTS
-#define AIRTRANSPORT_API __declspec(dllexport)
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define AIRTRANSPORT_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-class AIRTRANSPORT_API AirTransport : public Transport // класс Воздушный транспорт
+//#ifdef AIRTRANSPORT_EXPORTS
+//#define AIRTRANSPORT_API __declspec(dllexport)
+//#else
+//#define AIRTRANSPORT_API __declspec(dllimport)
+//#endif
+
+class TRANSPORTLIB_API AirTransport : public Transport // класс Воздушный транспорт
 {
 protected:
 	double distance_reduction_coefficient; // коэффициент сокращения расстояния

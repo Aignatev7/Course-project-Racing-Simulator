@@ -1,11 +1,18 @@
 #pragma once
-#ifdef TRANSPORTTYPE_EXPORTS
-#define TRANSPORTTYPE_API __declspec(dllexport)
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define TRANSPORTTYPE_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-enum class TRANSPORTTYPE_API TransportType {
+//#ifdef TRANSPORTTYPE_EXPORTS
+//#define TRANSPORTTYPE_API __declspec(dllexport)
+//#else
+//#define TRANSPORTTYPE_API __declspec(dllimport)
+//#endif
+
+enum class TRANSPORTLIB_API TransportType {
 	Ground,
 	Air
 };

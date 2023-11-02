@@ -2,14 +2,22 @@
 #include <iostream>
 #include "GroundTransport.h"
 #include "TransportType.h"
-#ifdef ALLTERRAINBOOTS_EXPORTS
-#define ALLTERRAINBOOTS_API __declspec(dllexport)
+
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define ALLTERRAINBOOTS_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
+//#ifdef ALLTERRAINBOOTS_EXPORTS
+//#define ALLTERRAINBOOTS_API __declspec(dllexport)
+//#else
+//#define ALLTERRAINBOOTS_API __declspec(dllimport)
+//#endif
 
-class ALLTERRAINBOOTS_API AllTerrainBoots : public GroundTransport // класс Ботинки-вездеходы
+
+class TRANSPORTLIB_API AllTerrainBoots : public GroundTransport // класс Ботинки-вездеходы
 {
 public:
 	AllTerrainBoots();

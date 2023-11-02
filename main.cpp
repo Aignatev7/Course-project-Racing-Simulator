@@ -11,6 +11,7 @@
 #include "Broomstick.h"
 #include "TransportType.h"
 #include "transport_factory.h"
+#include "Header.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");

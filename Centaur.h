@@ -1,12 +1,19 @@
 #pragma once
 #include "GroundTransport.h"
-#ifdef CENTAUR_EXPORTS
-#define CENTAUR_API __declspec(dllexport)
+
+#ifdef TRANSPORTLIB_EXPORTS
+#define TRANSPORTLIB_API __declspec(dllexport)
 #else
-#define CENTAUR_API __declspec(dllimport)
+#define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-class CENTAUR_API Centaur : public GroundTransport // класс Кентавр
+//#ifdef CENTAUR_EXPORTS
+//#define CENTAUR_API __declspec(dllexport)
+//#else
+//#define CENTAUR_API __declspec(dllimport)
+//#endif
+
+class TRANSPORTLIB_API Centaur : public GroundTransport // класс Кентавр
 {
 public:
 	Centaur();
