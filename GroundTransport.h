@@ -2,21 +2,12 @@
 #include "Transport.h"
 //#include "TransportType.h"
 
-#ifdef TRANSPORTLIB_EXPORTS
-#define TRANSPORTLIB_API __declspec(dllexport)
-#else
-#define TRANSPORTLIB_API __declspec(dllimport)
-#endif
-
-//#ifdef GROUNDTRANSPORT_EXPORTS
-//#define GROUNDTRANSPORT_API __declspec(dllexport)
-//#else
-//#define GROUNDTRANSPORT_API __declspec(dllimport)
-//#endif
-
-class TRANSPORTLIB_API GroundTransport : public Transport // класс Ќаземный транспорт
+class GroundTransport : public Transport // класс Ќаземный транспорт
 {
 protected:
+	int speed;                  // скорость
+	std::string name_transport; // наименование транспорта
+	double final_time = 0;		// итоговое врем€
 	int driving_time_before_rest; // врем€ движени€ до отдыха
 	int duration_of_rest;         // длительность отдыха
 

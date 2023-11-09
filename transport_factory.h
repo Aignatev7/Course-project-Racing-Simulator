@@ -1,12 +1,12 @@
 #pragma once
 #include "Transport.h"
-#include "Camel.h"
-#include "CamelFast.h"
-#include "Centaur.h"
-#include "AllTerrainBoots.h"
-#include "MagicCarpet.h"
-#include "Eagle.h"
-#include "Broomstick.h"
+//#include "Camel.h"
+//#include "CamelFast.h"
+//#include "Centaur.h"
+//#include "AllTerrainBoots.h"
+//#include "MagicCarpet.h"
+//#include "Eagle.h"
+//#include "Broomstick.h"
 #ifdef TRANSPORTFACTORY_EXPORTS
 #define TRANSPORTFACTORY_API __declspec(dllexport)
 #else

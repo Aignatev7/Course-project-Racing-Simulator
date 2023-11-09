@@ -1,5 +1,5 @@
 #pragma once
-//#include "Transport.h"
+#include "Transport.h"
 //#include "Eagle.h"
 
 #ifdef TRANSPORTLIB_EXPORTS
@@ -10,6 +10,6 @@
 
 TRANSPORTLIB_API Transport** makeTransports(size_t& total_transports);
 
-class TRANSPORTLIB_API CamelFast : public GroundTransport;
+//class TRANSPORTLIB_API CamelFast : public GroundTransport;
 
-class TRANSPORTLIB_API Eagle : public AirTransport; // класс ќрЄл
+//class TRANSPORTLIB_API Eagle : public AirTransport; // класс ќрЄл

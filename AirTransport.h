@@ -2,21 +2,12 @@
 #include "Transport.h"
 //#include "TransportType.h"
 
-#ifdef TRANSPORTLIB_EXPORTS
-#define TRANSPORTLIB_API __declspec(dllexport)
-#else
-#define TRANSPORTLIB_API __declspec(dllimport)
-#endif
-
-//#ifdef AIRTRANSPORT_EXPORTS
-//#define AIRTRANSPORT_API __declspec(dllexport)
-//#else
-//#define AIRTRANSPORT_API __declspec(dllimport)
-//#endif
-
-class TRANSPORTLIB_API AirTransport : public Transport // класс Воздушный транспорт
+class AirTransport : public Transport // класс Воздушный транспорт
 {
 protected:
+	int speed;                  // скорость
+	std::string name_transport; // наименование транспорта
+	double final_time = 0;		// итоговое время
 	double distance_reduction_coefficient; // коэффициент сокращения расстояния
 
 public:

@@ -1,19 +1,7 @@
 #pragma once
 #include "GroundTransport.h"
 
-#ifdef TRANSPORTLIB_EXPORTS
-#define TRANSPORTLIB_API __declspec(dllexport)
-#else
-#define TRANSPORTLIB_API __declspec(dllimport)
-#endif
-
-//#ifdef CAMELFAST_EXPORTS
-//#define CAMELFAST_API __declspec(dllexport)
-//#else
-//#define CAMELFAST_API __declspec(dllimport)
-//#endif
-
-class TRANSPORTLIB_API CamelFast : public GroundTransport // класс Верблюд-быстроход
+class CamelFast : public GroundTransport // класс Верблюд-быстроход
 {
 public:
 	CamelFast();

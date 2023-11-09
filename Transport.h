@@ -16,15 +16,15 @@
 
 class TRANSPORTLIB_API Transport // класс Транспорт
 {
-protected:
-	int speed;                  // скорость
-	std::string name_transport; // наименование транспорта
-	double final_time = 0;		// итоговое время
+//protected:
+//	int speed;                  // скорость
+//	std::string name_transport; // наименование транспорта
+//	double final_time = 0;		// итоговое время
 public:
 	virtual TransportType getType() = 0; //переопределяем тип в наследниках
 	virtual const char* getName() const = 0;       //название транспорта, для отображения в таблице результатов
 	virtual void set_final_time(double distance) = 0; //переопределяем в наследниках
-	double get_final_time(); //получить итоговое время, публичный метод
+	double get_final_time() = 0; //получить итоговое время, публичный метод
 };
 
 

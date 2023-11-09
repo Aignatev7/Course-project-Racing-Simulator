@@ -1,5 +1,13 @@
 #include "transport_factory.h"
 
+#include "Camel.h"
+#include "CamelFast.h"
+#include "Centaur.h"
+#include "AllTerrainBoots.h"
+#include "MagicCarpet.h"
+#include "Eagle.h"
+#include "Broomstick.h"
+
 Transport** makeTransports(size_t& total_transports)
 {
 	total_transports = 7;

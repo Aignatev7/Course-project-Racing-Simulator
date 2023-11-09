@@ -1,17 +1,17 @@
 #include <iostream>
-#include "Transport.h"
-#include "GroundTransport.h"
-#include "Camel.h"
-#include "CamelFast.h"
-#include "Centaur.h"
-#include "AllTerrainBoots.h"
-#include "AirTransport.h"
-#include "MagicCarpet.h"
-#include "Eagle.h"
-#include "Broomstick.h"
-#include "TransportType.h"
+//#include "Transport.h"
+//#include "GroundTransport.h"
+//#include "Camel.h"
+//#include "CamelFast.h"
+//#include "Centaur.h"
+//#include "AllTerrainBoots.h"
+//#include "AirTransport.h"
+//#include "MagicCarpet.h"
+//#include "Eagle.h"
+//#include "Broomstick.h"
+//#include "TransportType.h"
 #include "transport_factory.h"
-#include "Header.h"
+//#include "Header.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -56,26 +56,26 @@ int main() {
 		//results[i].time = transports_race[i]->calcTimeRide(100);
 	}
 
-	Camel camel;
-	camel.set_final_time(distance);
+	//Camel camel;
+	//camel.set_final_time(distance);
 
-	CamelFast camelFast;
-	camelFast.set_final_time(distance);
+	///*CamelFast camelFast;
+	//camelFast.set_final_time(distance);*/
 
-	Centaur centaur;
-	centaur.set_final_time(distance);
+	//Centaur centaur;
+	//centaur.set_final_time(distance);
 
-	AllTerrainBoots allTerrainBoots;
-	allTerrainBoots.set_final_time(distance);
+	//AllTerrainBoots allTerrainBoots;
+	//allTerrainBoots.set_final_time(distance);
 
-	MagicCarpet magicCarpet;
-	magicCarpet.set_final_time(distance);
+	//MagicCarpet magicCarpet;
+	//magicCarpet.set_final_time(distance);
 
-	Eagle eagle;
-	eagle.set_final_time(distance);
+	///*Eagle eagle;
+	//eagle.set_final_time(distance);*/
 
-	Broomstick broomstick;
-	broomstick.set_final_time(distance);
+	//Broomstick broomstick;
+	//broomstick.set_final_time(distance);
 
 	do {
 		if (registration == 1) {
