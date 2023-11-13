@@ -1,17 +1,5 @@
 #include <iostream>
-//#include "Transport.h"
-//#include "GroundTransport.h"
-//#include "Camel.h"
-//#include "CamelFast.h"
-//#include "Centaur.h"
-//#include "AllTerrainBoots.h"
-//#include "AirTransport.h"
-//#include "MagicCarpet.h"
-//#include "Eagle.h"
-//#include "Broomstick.h"
-//#include "TransportType.h"
 #include "transport_factory.h"
-//#include "Header.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -82,11 +70,11 @@ int main() {
 			switch (type_of_race) {
 			case 1:
 				std::cout << "Гонка для наземного транспорта. ";
-				//type_of_race = 1;
+				type_of_race = 1;
 				break;
 			case 2:
 				std::cout << "Гонка для воздушного транспорта. ";
-				//type_of_race = 2;
+				type_of_race = 2;
 				break;
 			case 3:
 				std::cout << "Гонка для наземного и воздушного транспорта. ";
@@ -97,8 +85,6 @@ int main() {
 		else {
 			return 1;
 		}
-
-		std::cout << "\ntype_of_race: " << type_of_race << std::endl;
 
 		std::cout << "Расстояние: " << distance << std::endl;
 		std::cout << "Зарегистрированные транспортные средства: " << transport_selection << std::endl;

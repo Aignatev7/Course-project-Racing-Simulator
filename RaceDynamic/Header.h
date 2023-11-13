@@ -1,5 +1,5 @@
 #pragma once
-#include "Transport.h"
+//#include "Transport.h"
 //#include "Eagle.h"
 
 #ifdef TRANSPORTLIB_EXPORTS
@@ -8,7 +8,7 @@
 #define TRANSPORTLIB_API __declspec(dllimport)
 #endif
 
-TRANSPORTLIB_API Transport** makeTransports(size_t& total_transports);
+//TRANSPORTLIB_API Transport** makeTransports(size_t& total_transports);
 
 //class TRANSPORTLIB_API CamelFast : public GroundTransport;
 

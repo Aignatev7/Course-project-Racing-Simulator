@@ -17,9 +17,3 @@ public:
 	void set_final_time(double distance);
 	double get_final_time();
 };
-
-//class GroundTransport : public Transport {
-//public:
-//	TransportType getType() const override {
-//		return TransportType::Ground;
-//	}
